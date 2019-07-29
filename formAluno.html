@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:th="http://www.ultraq.net.nz/thymeleaf/layout">
+	  
+ 
+<head>
+<title> Sistema Alunos </title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="../../static/materialize/css/materialize.min.css" type="text/css">
+      <link rel="stylesheet" href="../../static/materialize/css/materialize.css" type="text/css"/>
+      <link rel="stylesheet" href="../../static/materialize/css/materialize.min.css" type="text/css">
+      <link rel="stylesheet" href="../../static/materialize/css/materialize.min.css" type="text/css"/>
+
+
+
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body> 
+			<h1> Cadastro de Alunos </h1>
+			
+			
+			<table class="container" >
+			<form method="post">
+			
+			<div>
+				<td> Nome do Aluno: <input type="text" value="" name="nome" /></td>
+				<td> Altura: <input type="text" value="" name="altura" /></td>
+				<td> Peso: <input type="text" value="" name="peso" /></td>
+				<td> Modalidade: <input type="text" value="" name="modalidade" /> </td>
+				<td> Situação: <input type="text" value="" name="situacao" /> </td>
+				<td> Em Provas: <input type="text" value="" name="emprovas" /></td>
+				<td> IMC: <input type="text" value="" name="imc" /></td>
+				<td> <button class="waves-effect waves-light btn" type="submit"> Salvar </button></td>
+			</form>
+			
+			
+			</div>
+			
+			<div>
+				<tbody>
+					<tr th:each="aluno : ${alunos}">
+								<td><span th:text="${aluno.nome}"></span></td>
+								<td><span th:text="${aluno.altura}"></span></td>
+								<td><span th:text="${aluno.peso}"></span></td>
+								<td><span th:text="${aluno.modalidade}"></span></td>
+								<td><span th:text="${aluno.situacao}"></span></td>
+								<td><span th:text="${aluno.emprovas}"></span></td>
+					</tr>
+				</tbody>
+			</div>
+
+			      <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+			      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+			
+			
+			</input>
+			
+			</form>
+			
+			
+			
+			
+			</body>
+
+</html>
